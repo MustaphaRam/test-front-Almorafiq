@@ -13,7 +13,7 @@ Morris.Bar({
     ykeys: ['value'],       // Y-axis
     labels: ['Value'],      // Labels for Y-axis
     barColors: ['#3498db'], // bar colors
-    barSize: [5],           // bar width
+    barSize: [10],           // bar width
     fontSize: [10]
 });
 
@@ -22,16 +22,15 @@ Morris.Bar({
 new Morris.Line({
     element: 'myChart2',
     data: [
-      { year: '2020', value: 35 },
-      { year: '2021', value: 16 },
-      { year: '2022', value: 40 },
-      { year: '2023', value: 28 },
-      { year: '2024', value: 60 }
+      { year: '2020', value: 2502000 },
+      { year: '2021', value: 2056000 },
+      { year: '2022', value: 2007000 },
+      { year: '2023', value: 1958000 },
+      { year: '2024', value: 1824000 }
     ],
     xkey: 'year',
     ykeys: ['value'],
     labels: ['Value'],
-    ymax: [100]
 });
 
 // the chart have 3 bar 
@@ -59,7 +58,7 @@ Morris.Donut({
         { label: 'Server C', value: 20 }
     ],
     colors: ['#5f8dbf', '#fff200', '#119f2b'],
-    formatter: function (y) { return y + "%"; }
+    formatter: function (y) { return y + "%"; },
 });
   
 Morris.Donut({
@@ -105,58 +104,44 @@ Morris.Bar({
     labels: ['Sales'],
     preUnits: '$',
     barSize: 10,
-    xLabelAngle: 90,
+    /* xLabelAngle: 90, */
 });
-$('#myChart7').css({'transform': 'rotate(90deg)'});
+/* $('#myChart7').css({'transform': 'rotate(90deg)'}); */
 
 
-/* var ctx = document.getElementById('multi-axis-chart').getContext('2d');
+new Morris.Line({
+  element: 'myChart8',
+  data: [
+    { label: '1', value: 3256000 },
+    { label: '2', value: 2141000 },
+    { label: '3', value: 2848000 },
+    { label: '4', value: 4089000 },
+    { label: '5', value: 3404000 }
+  ],
+  xkey: 'label',
+  ykeys: ['value'],
+  labels: ['Value'],
+  barColors: ['#3498db'],
+  preUnits: 'KJ',
+  fontSize: [9]
+});
 
-// Sample data with two datasets and different units
-var data = {
-  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-  datasets: [{
-    label: 'Temperature (°C)',
-    data: [10, 15, 20, 25, 30, 28, 25],
-    yAxisID: 'y-axis-temperature',
-    borderColor: 'red',
-    backgroundColor: 'rgba(255, 99, 132, 0.2)',
-  }, {
-    label: 'Rainfall (mm)',
-    data: [50, 80, 120, 180, 150, 100, 60],
-    yAxisID: 'y-axis-rainfall',
-    borderColor: 'blue',
-    backgroundColor: 'rgba(54, 162, 235, 0.2)',
-  }]
-};
 
-var config = {
-  type: 'line',
-  data: data,
-  options: {
-    scales: {
-      yAxes: [{
-        id: 'y-axis-temperature',
-        position: 'left',
-        label: 'Temperature (°C)',
-        ticks: {
-          min: 0,
-          max: 35
-        }
-      }, {
-        id: 'y-axis-rainfall',
-        position: 'right',
-        label: 'Rainfall (mm)',
-        ticks: {
-          min: 0,
-          max: 200
-        }
-      }]
-    }
-  }
-}; */
+Morris.Donut({
+  element: 'myChart9',  // ID of the container element
+  data: [
+    { label: 'Category 1', value: 30 },
+    { label: 'Category 2', value: 45 },
+    { label: 'Category 3', value: 25 }
+  ],
+  colors: ['#3498db', '#2ecc71', '#e74c3c'],
+  formatter: function (y, data) { return y + '%' },
+  resize: true,
+  formatter: function (y, data) { return y + '%' },
+  resize: true, 
+  donutWidth: 0.6
+});
 
-// **Corrected line:**
-var chart = new Chart(ctx, config);
- 
+
+
 

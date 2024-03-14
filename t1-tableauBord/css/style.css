@@ -10,6 +10,10 @@
     transform: scale(1.1);
 }
 
+#myChart4 svg {
+    height: 300px;
+}
+
 #myChart5 svg {
     /* Hide default donut hole */
     stroke-width: 5px;
