@@ -1,0 +1,36 @@
+#tableau .row > div {
+    margin: 2em 0 0 0;
+}
+
+#tableau .hover {
+    transition: all 0.4s;
+}
+#tableau .hover:hover {
+    margin-top: 40px;
+    transform: scale(1.1);
+}
+
+#myChart5 svg {
+    /* Hide default donut hole */
+    stroke-width: 5px;
+}
+  
+#myChart5 svg path:first-child {
+    /* Style empty space ring */
+    fill: #ddd;
+    opacity: 0.3;
+
+}
+
+#myChart5 svg path {
+    /* Style data section */
+    stroke: #f0f0f8;
+    stroke-width: 2px;
+    opacity: 0.4;
+}
+  
+#myChart7 svg text{
+    /* Rotate x-axis labels */
+    /* transform: rotate(180deg); */
+    stroke-width: 5px;
+}
